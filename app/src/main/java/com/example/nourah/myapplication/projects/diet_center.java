@@ -38,7 +38,6 @@ public class diet_center extends AppCompatActivity {
         else{
 
             vi.start();}
-        //vi.requestFocus();
     }
 
 
