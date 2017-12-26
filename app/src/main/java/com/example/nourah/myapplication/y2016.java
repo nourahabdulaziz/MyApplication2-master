@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.example.nourah.myapplication.projects.Arrangement_words;
 import com.example.nourah.myapplication.projects.english_language;
 import com.example.nourah.myapplication.projects.four_questions;
 import com.example.nourah.myapplication.projects.prophet;
@@ -65,7 +64,7 @@ public class y2016 extends AppCompatActivity {
 
 
                 if (position == 2) {
-                    Intent i = new Intent(view.getContext(),Arrangement_words.class);
+                    Intent i = new Intent(view.getContext(), com.example.nourah.myapplication.Arrangement_words.class);
                     startActivityForResult(i, 2);
                 }
 

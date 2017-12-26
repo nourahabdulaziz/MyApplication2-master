@@ -17,6 +17,10 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.nourah.myapplication.projects.english_language;
+import com.example.nourah.myapplication.projects.four_questions;
+import com.example.nourah.myapplication.projects.prophet;
+
 import java.util.ArrayList;
 
 public class search extends AppCompatActivity {
@@ -139,7 +143,7 @@ public class search extends AppCompatActivity {
                     Intent i = new Intent(view.getContext(), english_language.class);
                     startActivityForResult(i, 9);
                 }if (position == 10) {
-                    Intent i = new Intent(view.getContext(), Arrangement_words.class);
+                    Intent i = new Intent(view.getContext(), com.example.nourah.myapplication.Arrangement_words.class);
                     startActivityForResult(i, 10);
                 }if (position == 11) {
                     Intent i = new Intent(view.getContext(), prophet.class);

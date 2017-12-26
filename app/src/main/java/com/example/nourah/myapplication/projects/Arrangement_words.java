@@ -33,7 +33,6 @@ public class Arrangement_words extends AppCompatActivity {
         setContentView(R.layout.activity_arrangement_words);
         t1=(TextView)findViewById(R.id.textView) ;
         t2=(TextView)findViewById(R.id.textView2) ;
-        clk = (Button) findViewById(R.id.Watch);
         getWindow().setFormat(PixelFormat.UNKNOWN);
         vi = (VideoView) findViewById(R.id.videoView);
     }public void videoplay(View view){
@@ -62,8 +61,7 @@ public class Arrangement_words extends AppCompatActivity {
             //String shareSub="Your Subject here";
             intent.putExtra(Intent.EXTRA_SUBJECT,t1.getText());
             intent.putExtra(Intent.EXTRA_TEXT,t2.getText());
-            //intent.putExtra(Intent.EXTRA_STREAM, imageUri);
-            //intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile();//pngFile
+
 
             startActivity(Intent.createChooser(intent,"Share using"));
         }
