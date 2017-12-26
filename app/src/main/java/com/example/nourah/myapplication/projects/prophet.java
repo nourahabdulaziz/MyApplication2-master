@@ -26,9 +26,6 @@ public class prophet extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Log.d("test", "create menu ");
 
-
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("go back");
         setContentView(R.layout.activity_prophet);
         t1=(TextView)findViewById(R.id.textView) ;
         t2=(TextView)findViewById(R.id.textView2) ;

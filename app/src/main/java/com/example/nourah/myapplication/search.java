@@ -16,11 +16,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
-
-import com.example.nourah.myapplication.projects.english_language;
-import com.example.nourah.myapplication.projects.four_questions;
-import com.example.nourah.myapplication.projects.prophet;
-
+import com.example.nourah.myapplication.projects.*;
 import java.util.ArrayList;
 
 public class search extends AppCompatActivity {
@@ -34,7 +30,6 @@ public class search extends AppCompatActivity {
         setContentView(R.layout.activity_search);
         listView=(ListView)findViewById(R.id.listview);
         items=new ArrayList<>();
-        items.add("project");
         items.add("project 2017");
         items.add("project 2016");
         items.add("project 2015");
@@ -42,10 +37,15 @@ public class search extends AppCompatActivity {
         items.add("project 2013");
         items.add("project 2012");
         items.add("project 2011");
-        items.add("Questions Qame");
+        items.add("Questions Game");
         items.add("Development of the english language");
         items.add("Arrangement Words");
         items.add("Questions about the Prophet");
+        items.add("Diet Center");
+        items.add("Guess Secret Game");
+        items.add("Learn &amp; play");
+        items.add("Optical Memory Speed Game");
+        items.add("Pharmacy Management System");
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             public void onItemClick(AdapterView<?> adapterView, View view ,int i,long l){
@@ -68,9 +68,7 @@ public class search extends AppCompatActivity {
 
                         break;
                     case R.id.navigation_search:
-                        //Intent i2=new Intent(likepage.this,likepage.class);
 
-                        // startActivity(i2);
                         break;
                     case R.id.navigation_profile:
                         Intent i3=new Intent(search.this,profile.class);
@@ -85,8 +83,8 @@ public class search extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater=getMenuInflater();
         inflater.inflate(R.menu.menu,menu);
-        MenuItem item=menu.findItem(R.id.item_search);
-        SearchView searchView=(SearchView) MenuItemCompat.getActionView(item);
+        final MenuItem item=menu.findItem(R.id.item_search);
+        final SearchView searchView=(SearchView) MenuItemCompat.getActionView(item);
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener(){
             @Override
@@ -100,54 +98,87 @@ public class search extends AppCompatActivity {
                 ArrayAdapter<String> adapter=new ArrayAdapter<>(search.this,
                         android.R.layout.simple_list_item_1,templist);
                 listView.setAdapter(adapter);
+                adapter.notifyDataSetChanged();
                 return true;
             }
-            @Override
-            public boolean onQueryTextSubmit(String query) {
 
-                return false;
-            }
-        });listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
+
+            public boolean onQueryTextSubmit(String query) {
+               // if(query.contains("prophet")){
+                  //  Intent i = new Intent(search.this, settings.class);
+                    //startActivityForResult(i, 0);
+              //  startActivity(i);
+                //}
+
+                return true;
+            }
+
+        });
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+          //  @Override
             public void onItemClick(AdapterView<?> parent, View view,
-                                    int position, long id) {
-                if (position == 0) {
-                    Intent i = new Intent(view.getContext(), projectspage.class);
-                    startActivityForResult(i, 0);
-                }
-                if (position == 1) {
-                    Intent i = new Intent(view.getContext(), y2017.class);
-                    startActivityForResult(i, 1);
-                }if (position == 2) {
+                                  int position, long id) {
+
+                Object d=listView.getAdapter().getItem(position);
+                String str=d.toString();
+                Toast.makeText(getApplicationContext(),str,Toast.LENGTH_SHORT);
+
+                if (str == "project 2017") {
+                   Intent i = new Intent(view.getContext(), y2017.class);
+                    startActivity(i);
+                }if (str == "project 2016") {
                     Intent i = new Intent(view.getContext(), y2016.class);
-                    startActivityForResult(i, 2);
-                }if (position == 3) {
+                    startActivity(i);
+                }if (str == "project 2015") {
                     Intent i = new Intent(view.getContext(), y2015.class);
-                    startActivityForResult(i, 3);
-                }if (position == 4) {
+                    startActivity(i);
+                }if (str == "project 2014") {
                     Intent i = new Intent(view.getContext(), y2014.class);
-                    startActivityForResult(i, 4);
-                }if (position == 5) {
+                    startActivity(i);
+                }if (str == "project 2013") {
                     Intent i = new Intent(view.getContext(), y2013.class);
-                    startActivityForResult(i, 5);
-                }if (position == 6) {
+                    startActivity(i);
+                }if (str == "project 2012") {
                     Intent i = new Intent(view.getContext(), y2012.class);
-                    startActivityForResult(i, 6);
-                }if (position == 7) {
+                    startActivity(i);
+                }if (str == "project 2011") {
                     Intent i = new Intent(view.getContext(), y2011.class);
-                    startActivityForResult(i, 7);
-                }if (position == 8) {
-                    Intent i = new Intent(view.getContext(), four_questions.class);
+                    startActivity(i);
+                }if (str == "Questions Game") {
+                    Intent i = new Intent(view.getContext(),four_questions.class);
+                    startActivity(i);
+                }if (str == "Questions about the Prophet") {
+                    Intent i = new Intent(view.getContext(),prophet.class);
                     startActivityForResult(i, 8);
-                }if (position == 9) {
-                    Intent i = new Intent(view.getContext(), english_language.class);
-                    startActivityForResult(i, 9);
-                }if (position == 10) {
-                    Intent i = new Intent(view.getContext(), com.example.nourah.myapplication.Arrangement_words.class);
-                    startActivityForResult(i, 10);
-                }if (position == 11) {
-                    Intent i = new Intent(view.getContext(), prophet.class);
-                    startActivityForResult(i, 11);
+                }if (str == "Development of the english language") {
+                    Intent i = new Intent(view.getContext(),english_language.class);
+                    startActivity(i);
+                }if (str == "Arrangement Words") {
+                    Intent i = new Intent(view.getContext(),Arrangement_words.class);
+                    startActivity(i);
+
+                }if (str == "Diet Center") {
+                    Intent i = new Intent(view.getContext(),diet_center.class);
+                    startActivity(i);
+
+                }if (str == "Guess Secret Game") {
+                    Intent i = new Intent(view.getContext(),guess_secret.class);
+                    startActivity(i);
+
+                }if (str == "Learn &amp; play") {
+                    Intent i = new Intent(view.getContext(),learn_play.class);
+                    startActivity(i);
+
+                }if (str == "Optical Memory Speed Game") {
+                    Intent i = new Intent(view.getContext(),optical_memory_speed.class);
+                    startActivity(i);
+
+                }if (str == "Pharmacy Management System") {
+                    Intent i = new Intent(view.getContext(),pharmacy_managment_system.class);
+                    startActivity(i);
+
                 }
             }
         });

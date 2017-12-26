@@ -22,9 +22,6 @@ public class p1_y2017 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Log.d("test", "create menu ");
 
-
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("go back");
         setContentView(R.layout.activity_p1_y2017);
         t1=(TextView)findViewById(R.id.textView) ;
         t2=(TextView)findViewById(R.id.textView2) ;
@@ -35,10 +32,6 @@ public class p1_y2017 extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item){
         int id=item.getItemId();
 
-        if(id==android.R.id.home){
-
-            this.finish();
-        }
         if(id==R.id.share){
 
             Intent intent=new Intent(Intent.ACTION_SEND);

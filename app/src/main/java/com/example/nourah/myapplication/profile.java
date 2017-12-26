@@ -38,7 +38,6 @@ public class profile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-        Log.d("test", "profile page");
         sh = getSharedPreferences(registration.MyPREFERENCES, Context.MODE_PRIVATE);
 
         imp = (ImageView) findViewById(R.id.profile_image);

@@ -1,4 +1,4 @@
-package com.example.nourah.myapplication;
+package com.example.nourah.myapplication.projects;
 
 import android.content.Intent;
 import android.graphics.PixelFormat;
@@ -14,6 +14,8 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.VideoView;
 
+import com.example.nourah.myapplication.R;
+
 public class Arrangement_words extends AppCompatActivity {
     ImageButton button;
     TextView t1,t2;
@@ -27,16 +29,14 @@ public class Arrangement_words extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Log.d("test", "create menu ");
 
-
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("go back");
         setContentView(R.layout.activity_arrangement_words);
         t1=(TextView)findViewById(R.id.textView) ;
         t2=(TextView)findViewById(R.id.textView2) ;
         getWindow().setFormat(PixelFormat.UNKNOWN);
-        vi = (VideoView) findViewById(R.id.videoView);
-    }public void videoplay(View view){
-        String vidiop = "android.resource://com.example.nourah.myapplication/"+R.raw.order_words;
+        vi = (VideoView) findViewById(R.id.videoView);}
+
+        public void videoplay(View view){
+        String vidiop = "android.resource://"+getApplicationContext().getPackageName()+"/"+R.raw.order_words;
         Uri uri2 = Uri.parse(vidiop);
         vi.setVideoURI(uri2);
         vi.requestFocus();

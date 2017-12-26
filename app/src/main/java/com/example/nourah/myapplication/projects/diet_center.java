@@ -31,7 +31,7 @@ public class diet_center extends AppCompatActivity {
         vi.setVideoURI(uri2);
         vi.seekTo(100);}
 
-    public void videoplay(View view){
+        public void videoplay(View view){
 
         if(vi.isPlaying()) {
             vi.pause();}
