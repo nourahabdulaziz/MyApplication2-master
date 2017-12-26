@@ -37,7 +37,7 @@ public class english_language extends AppCompatActivity {
         getWindow().setFormat(PixelFormat.UNKNOWN);
         vi = (VideoView) findViewById(R.id.videoView);
     }public void videoplay(View view){
-        String vidiop = "android.resource://com.example.toshiba.project/"+R.raw.development_of_the_english_language;
+        String vidiop = "android.resource://com.example.nourah.myapplication/"+R.raw.development_of_the_english_language;
         Uri uri2 = Uri.parse(vidiop);
         vi.setVideoURI(uri2);
         vi.requestFocus();

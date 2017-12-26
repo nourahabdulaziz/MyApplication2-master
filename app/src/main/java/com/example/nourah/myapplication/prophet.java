@@ -37,7 +37,7 @@ public class prophet extends AppCompatActivity {
         getWindow().setFormat(PixelFormat.UNKNOWN);
         vi = (VideoView) findViewById(R.id.videoView);
     }public void videoplay(View view){
-        String vidiop = "android.resource://com.example.toshiba.project/"+R.raw.questions_about_the_prophet;
+        String vidiop = "android.resource://com.example.nourah.myapplication/"+R.raw.questions_about_the_prophet;
         Uri uri2 = Uri.parse(vidiop);
         vi.setVideoURI(uri2);
         vi.requestFocus();

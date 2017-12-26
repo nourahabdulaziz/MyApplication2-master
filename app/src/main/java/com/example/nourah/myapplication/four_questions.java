@@ -37,7 +37,7 @@ public class four_questions extends AppCompatActivity {
         getWindow().setFormat(PixelFormat.UNKNOWN);
         vi = (VideoView) findViewById(R.id.videoView);
     }public void videoplay(View view){
-        String vidiop = "android.resource://com.example.toshiba.project/"+R.raw.four_questions;
+        String vidiop = "android.resource://com.example.nourah.myapplication/"+R.raw.four_questions;
         Uri uri2 = Uri.parse(vidiop);
         vi.setVideoURI(uri2);
         vi.requestFocus();

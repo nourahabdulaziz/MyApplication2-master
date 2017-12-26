@@ -37,7 +37,7 @@ public class Arrangement_words extends AppCompatActivity {
         getWindow().setFormat(PixelFormat.UNKNOWN);
         vi = (VideoView) findViewById(R.id.videoView);
     }public void videoplay(View view){
-        String vidiop = "android.resource://com.example.toshiba.project/"+R.raw.order_words;
+        String vidiop = "android.resource://com.example.nourah.myapplication/"+R.raw.order_words;
         Uri uri2 = Uri.parse(vidiop);
         vi.setVideoURI(uri2);
         vi.requestFocus();
