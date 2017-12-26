@@ -10,8 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-        android:name=".splash_screen"
-        android:theme="@style/Fullscreen"/>
+            android:name=".splash_screen"
+            android:theme="@style/Fullscreen" />
         <activity android:name=".profile" />
         <activity android:name=".login" />
         <activity android:name=".registration" />
@@ -35,10 +35,15 @@
         <activity android:name=".y2013" />
         <activity android:name=".y2012" />
         <activity android:name=".y2011" />
-        <activity android:name=".english_language" />
-        <activity android:name=".prophet" />
-        <activity android:name=".Arrangement_words" />
-        <activity android:name=".four_questions"></activity>
+        <activity android:name=".projects.english_language" />
+        <activity android:name=".projects.prophet" />
+        <activity android:name=".projects.Arrangement_words" />
+        <activity android:name=".projects.four_questions" />
+        <activity android:name=".projects.learn_play" />
+        <activity android:name=".projects.pharmacy_managment_system" />
+        <activity android:name=".projects.guess_secret" />
+        <activity android:name=".projects.optical_memory_speed" />
+        <activity android:name=".projects.diet_center"></activity>
     </application>
 
 </manifest>

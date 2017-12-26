@@ -13,10 +13,8 @@ import android.widget.TextView;
 
 
 public class p1_y2017 extends AppCompatActivity {
-    ImageButton button;
     TextView t1,t2;
     Menu menu;
-    private Uri imageUri;
 
 
     @Override
@@ -47,12 +45,9 @@ public class p1_y2017 extends AppCompatActivity {
             intent.setType("text/plain");
             intent.setType("image/*");
 
-            //String shareBody="Your body here";
-            //String shareSub="Your Subject here";
             intent.putExtra(Intent.EXTRA_SUBJECT,t1.getText());
             intent.putExtra(Intent.EXTRA_TEXT,t2.getText());
-            //intent.putExtra(Intent.EXTRA_STREAM, imageUri);
-            //intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile();//pngFile
+
 
             startActivity(Intent.createChooser(intent,"Share using"));
         }

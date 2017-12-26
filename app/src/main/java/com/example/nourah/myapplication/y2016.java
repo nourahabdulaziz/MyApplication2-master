@@ -9,6 +9,11 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.example.nourah.myapplication.projects.Arrangement_words;
+import com.example.nourah.myapplication.projects.english_language;
+import com.example.nourah.myapplication.projects.four_questions;
+import com.example.nourah.myapplication.projects.prophet;
+
 public class y2016 extends AppCompatActivity {
     ListView list;
 
@@ -38,7 +43,7 @@ public class y2016 extends AppCompatActivity {
         setContentView(R.layout.activity_y2016);
 
 
-        adapter2017 adapter = new adapter2017(this, itemname, imgid);
+        adapterprojects adapter = new adapterprojects(this, itemname, imgid);
         list=(ListView)findViewById(R.id.list) ;
 
         list.setAdapter(adapter);
