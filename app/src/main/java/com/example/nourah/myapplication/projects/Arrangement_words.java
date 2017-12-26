@@ -57,8 +57,6 @@ public class Arrangement_words extends AppCompatActivity {
             intent.setType("text/plain");
             intent.setType("image/*");
 
-            //String shareBody="Your body here";
-            //String shareSub="Your Subject here";
             intent.putExtra(Intent.EXTRA_SUBJECT,t1.getText());
             intent.putExtra(Intent.EXTRA_TEXT,t2.getText());
 
